@@ -44,7 +44,8 @@ packer.startup({function()
   -- Packer 可以管理自己本身
   use 'wbthomason/packer.nvim'
   -- 插件列表...
-
+  use('olimorris/onedarkpro.nvim')
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
