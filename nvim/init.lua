@@ -4,4 +4,5 @@ require('basic')
 require('plugins')
 -- 主题管理配置
 require('colorscheme')
-
+-- 快捷键管理
+require('keybindings')
