@@ -42,4 +42,6 @@ keymap("v", "p", '"_dP', opt)
 keymap("i", "<C-h>", "<ESC>I", opt)
 keymap("i", "<C-l>", "<ESC>A", opt)
 
-
+-- nvim-tree
+-- -- alt + m 键打开关闭tree
+keymap("n", "<A-m>", ":NvimTreeToggle<CR>", opt)

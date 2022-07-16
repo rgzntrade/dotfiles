@@ -45,7 +45,9 @@ packer.startup({function()
   use 'wbthomason/packer.nvim'
   -- 插件列表...
   use('olimorris/onedarkpro.nvim')
-  
+-- 文件管理
+  use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

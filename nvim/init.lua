@@ -6,3 +6,5 @@ require('plugins')
 require('colorscheme')
 -- 快捷键管理
 require('keybindings')
+-- 文件管理
+require('conf')
