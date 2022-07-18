@@ -56,3 +56,10 @@ keymap("n", "<A-w>", ":Bdelete!<CR>", opt)
 keymap("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 keymap("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 keymap("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+
+-- Telescope
+-- 查找文件
+keymap("n", "<leader>f", ":Telescope find_files<CR>", opt)
+-- 全局搜索
+keymap("n", "<leader>F", ":Telescope live_grep<CR>", opt)
+
