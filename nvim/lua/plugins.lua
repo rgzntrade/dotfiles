@@ -49,6 +49,8 @@ packer.startup({function()
   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
 -- lualine (新增)
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" }})
+  -- 顶部标签
+  use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
