@@ -47,17 +47,21 @@ packer.startup({function()
   use('olimorris/onedarkpro.nvim')
 -- 文件管理
   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
--- lualine (新增)
+-- lualine 
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" }})
   -- 顶部标签
   use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
- -- telescope （新增）
+ -- telescope 
   use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
+  -- alpha-nvim 
+  use "goolord/alpha-nvim"
+  -- project
+  use("ahmedkhalf/project.nvim")
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+-- Automatically set up your configuration after cloning packer.nvim
+-- Put this at the end after all plugins
+if packer_bootstrap then
+  require('packer').sync()
+end
 end
 })

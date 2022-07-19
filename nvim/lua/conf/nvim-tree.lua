@@ -147,8 +147,10 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
         enable = true,
         auto_open = true,
       },
+      update_cwd = true,
       update_focused_file = {
-        enable = false,
+        enable = true,
+        update_cwd = true,
         update_root = false,
         ignore_list = {},
       },
@@ -172,11 +174,11 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
         custom = {},
         exclude = {},
       },
-      filesystem_watchers = {
-        enable = false,
-        interval = 100,
-        debounce_delay = 50,
-      },
+      -- filesystem_watchers = {
+      --  enable = false,
+      -- interval = 100,
+      -- debounce_delay = 50,
+      -- },
       git = {
         enable = true,
         ignore = true,
