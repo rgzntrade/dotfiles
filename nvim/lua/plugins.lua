@@ -57,6 +57,8 @@ packer.startup({function()
   use "goolord/alpha-nvim"
   -- project
   use("ahmedkhalf/project.nvim")
+  -- session
+  use "Shatur/neovim-session-manager"
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
