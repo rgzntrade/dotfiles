@@ -59,6 +59,8 @@ packer.startup({function()
   use("ahmedkhalf/project.nvim")
   -- session
   use "Shatur/neovim-session-manager"
+  -- which-key
+  use "folke/which-key.nvim"
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
