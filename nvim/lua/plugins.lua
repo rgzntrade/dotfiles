@@ -61,6 +61,8 @@ packer.startup({function()
   use "Shatur/neovim-session-manager"
   -- which-key
   use "folke/which-key.nvim"
+--- zf-native 
+  use "natecraddock/telescope-zf-native.nvim"
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
