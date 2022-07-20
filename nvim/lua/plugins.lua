@@ -63,6 +63,11 @@ packer.startup({function()
   use "folke/which-key.nvim"
 --- zf-native 
   use "natecraddock/telescope-zf-native.nvim"
+-- Treesittetr
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
