@@ -3,11 +3,11 @@ if not status_ok then
   return
 end
 
+require 'nvim-treesitter.install'.compilers = { "clang"} -- , "clang", "gcc" 
+
 treesitter.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "c", "cpp", "cmake", "rust", "lua",
-  "json", "css", "llvm", "http",
-  "sql", "toml", "yaml"},
+  ensure_installed = { "c", "cpp", "cmake", "rust", "lua", "toml"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
