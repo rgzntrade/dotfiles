@@ -6,5 +6,7 @@ require('plugins')
 require('colorscheme')
 -- 快捷键管理
 require('keybindings')
--- 文件管理
+--  插件配置
 require('conf')
+--  lsp配置
+require('lsp')
