@@ -17,8 +17,8 @@ end
 
 -- 每次保存 plugins.lua 自动安装插件
 pcall(
-vim.cmd,
-[[
+  vim.cmd,
+  [[
 augroup packer_user_config
 autocmd!
 autocmd BufWritePost plugins.lua source <afile> | PackerSync
@@ -86,7 +86,8 @@ packer.startup({function()
 
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
-
+  -- rust-tools
+  use {"simrat39/rust-tools.nvim" }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
