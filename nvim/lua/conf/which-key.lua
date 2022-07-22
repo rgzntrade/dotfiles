@@ -83,6 +83,7 @@ local opts = {
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Welcome" },
   ["r"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+  ["f"] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
 }
 
 which_key.setup(setup)
