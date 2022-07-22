@@ -45,13 +45,13 @@ packer.startup({function()
   use 'wbthomason/packer.nvim'
   -- 插件列表...
   use('olimorris/onedarkpro.nvim')
--- 文件管理
+  -- 文件管理
   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
--- lualine 
+  -- lualine 
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" }})
   -- 顶部标签
   use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
- -- telescope 
+  -- telescope 
   use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
   -- alpha-nvim 
   use "goolord/alpha-nvim"
@@ -61,23 +61,36 @@ packer.startup({function()
   use "Shatur/neovim-session-manager"
   -- which-key
   use "folke/which-key.nvim"
---- zf-native 
+  --- zf-native 
   use "natecraddock/telescope-zf-native.nvim"
--- Treesittetr
+  -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
   --  nvim-lspconfig and installer 
-use {
+  use {
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
-}
+  }
+  -- 补全引擎
+  use("hrsh7th/nvim-cmp")
+  -- snippet 引擎
+  use("hrsh7th/vim-vsnip")
+  -- 补全源
+  use("hrsh7th/cmp-vsnip")
+  use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+  use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+  use("hrsh7th/cmp-path") -- { name = 'path' }
+  use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
--- Automatically set up your configuration after cloning packer.nvim
--- Put this at the end after all plugins
-if packer_bootstrap then
-  require('packer').sync()
-end
+  -- 常见编程语言代码段
+  use("rafamadriz/friendly-snippets")
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end
 })
