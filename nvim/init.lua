@@ -10,3 +10,5 @@ require('keybindings')
 require('conf')
 --  lsp配置
 require('lsp')
+-- debug配置
+require('debug-dap')

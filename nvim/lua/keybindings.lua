@@ -63,3 +63,17 @@ keymap("n", "<leader>f", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 keymap("n", "<leader>F", ":Telescope live_grep<CR>", opt)
 
+-- debug
+keymap("n", "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opt)
+keymap("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opt)
+keymap("n", "<leader>dm", "<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", opt)
+keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opt)
+keymap("n", "<Leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opt)
+keymap('n', '<F10>', '<cmd>lua require"debug-dap.dap-util".reload_continue()<CR>', opt)
+keymap("n", "<S-F5>", "<cmd>lua require'dap'.terminate()<cr>", opt)
+keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opt)
+keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<cr>", opt)
+keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<cr>", opt)
+keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<cr>", opt)
+keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opt)
+-- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opt)

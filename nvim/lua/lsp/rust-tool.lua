@@ -1,11 +1,20 @@
+-- Update this path
+local extension_path = vim.env.HOME .. '/.vscode/extensions/'
+extension_path = string.gsub(extension_path, '\\','/')
+local codelldb_path = extension_path .. 'vadimcn.vscode-lldb-1.7.3/adapter/codelldb.exe'
+local liblldb_path = extension_path .. 'vadimcn.vscode-lldb-1.7.3/lldb/bin/liblldb.dll'
+-- local liblldb_path = extension_path .. 'lanza.lldb-vscode-0.2.3/bin/darwin/lib/liblldb.9.0.0svn.dylib'
+-- codelldb_path = string.gsub(codelldb_path, '/', '\\' )
+-- liblldb_path = string.gsub(liblldb_path, '/', '\\')
+
 local opts = {
   tools = { -- rust-tools options
     -- automatically set inlay hints (type hints)
-    -- There is an issue due to which the hints are not applied on the first
-    -- opened file. For now, write to the file to trigger a reapplication of
-    -- the hints or just run :RustSetInlayHints.
+    -- there is an issue due to which the hints are not applied on the first
+    -- opened file. for now, write to the file to trigger a reapplication of
+    -- the hints or just run :rustsetinlayhints.
     -- default: true
-    autoSetHints = true,
+    autosethints = true,
 
     -- whether to show hover actions inside the hover window
     -- this overrides the default hover handler so something like lspsaga.nvim's hover would be overriden by this
@@ -17,21 +26,21 @@ local opts = {
     executor = require("rust-tools/executors").termopen,
 
     -- callback to execute once rust-analyzer is done initializing the workspace
-    -- The callback receives one parameter indicating the `health` of the server: "ok" | "warning" | "error"
+    -- the callback receives one parameter indicating the `health` of the server: "ok" | "warning" | "error"
     on_initialized = nil,
 
-    -- These apply to the default RustSetInlayHints command
+    -- these apply to the default rustsetinlayhints command
     inlay_hints = {
 
-      -- Only show inlay hints for the current line
+      -- only show inlay hints for the current line
       only_current_line = false,
 
-      -- Event which triggers a refersh of the inlay hints.
-      -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
-      -- not that this may cause higher CPU usage.
-      -- This option is only respected when only_current_line and
-      -- autoSetHints both are true.
-      only_current_line_autocmd = "CursorHold",
+      -- event which triggers a refersh of the inlay hints.
+      -- you can make this "cursormoved" or "cursormoved,cursormovedi" but
+      -- not that this may cause higher cpu usage.
+      -- this option is only respected when only_current_line and
+      -- autosethints both are true.
+      only_current_line_autocmd = "cursorhold",
 
       -- whether to show parameter hints with the inlay hints or not
       -- default: true
@@ -61,8 +70,8 @@ local opts = {
       -- padding from the right if right_align is true
       right_align_padding = 7,
 
-      -- The color of the hints
-      highlight = "Comment",
+      -- the color of the hints
+      highlight = "comment",
     },
 
     -- options same as lsp hover / vim.lsp.util.open_floating_preview()
@@ -70,14 +79,14 @@ local opts = {
       -- the border that is used for the hover window
       -- see vim.api.nvim_open_win()
       border = {
-        { "╭", "FloatBorder" },
-        { "─", "FloatBorder" },
-        { "╮", "FloatBorder" },
-        { "│", "FloatBorder" },
-        { "╯", "FloatBorder" },
-        { "─", "FloatBorder" },
-        { "╰", "FloatBorder" },
-        { "│", "FloatBorder" },
+        { "╭", "floatborder" },
+        { "─", "floatborder" },
+        { "╮", "floatborder" },
+        { "│", "floatborder" },
+        { "╯", "floatborder" },
+        { "─", "floatborder" },
+        { "╰", "floatborder" },
+        { "│", "floatborder" },
       },
 
       -- whether the hover action window gets automatically focused
@@ -88,7 +97,7 @@ local opts = {
     -- settings for showing the crate graph based on graphviz and the dot
     -- command
     crate_graph = {
-      -- Backend used for displaying the graph
+      -- backend used for displaying the graph
       -- see: https://graphviz.org/docs/outputs/
       -- default: x11
       backend = "x11",
@@ -101,9 +110,9 @@ local opts = {
       -- default: true
       full = true,
 
-      -- List of backends found on: https://graphviz.org/docs/outputs/
-      -- Is used for input validation and autocompletion
-      -- Last updated: 2021-08-26
+      -- list of backends found on: https://graphviz.org/docs/outputs/
+      -- is used for input validation and autocompletion
+      -- last updated: 2021-08-26
       enabled_graphviz_backends = {
         "bmp",
         "cgimage",
@@ -167,6 +176,27 @@ local opts = {
   -- these override the defaults set by rust-tools.nvim
   -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
   server = {
+    settings = {
+      ["rust-analyzer"] = {
+        assist = {
+          importEnforceGranularity = true,
+          importPrefix = "crate"
+        },
+        cargo = {
+          allFeatures = true
+        },
+        checkOnSave = {
+          -- default: `cargo check`
+          command = "clippy"
+        },
+      },
+      inlayHints = {
+        lifetimeElisionHints = {
+          enable = true,
+          useParameterNames = true
+        },
+      },
+    },
     -- standalone file support
     -- setting it to false may improve startup time
     standalone = true,
@@ -174,11 +204,8 @@ local opts = {
 
   -- debugging stuff
   dap = {
-    adapter = {
-      type = "executable",
-      command = "lldb-vscode",
-      name = "rt_lldb",
-    },
+    adapter = require('rust-tools.dap').get_codelldb_adapter(
+            codelldb_path, liblldb_path),
   },
 }
 

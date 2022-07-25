@@ -88,6 +88,10 @@ packer.startup({function()
   use("rafamadriz/friendly-snippets")
   -- rust-tools
   use {"simrat39/rust-tools.nvim" }
+  -- debug
+  use("mfussenegger/nvim-dap")
+  use("theHamsta/nvim-dap-virtual-text")
+  use("rcarriga/nvim-dap-ui")
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
