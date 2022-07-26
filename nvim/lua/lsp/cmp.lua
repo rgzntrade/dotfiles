@@ -22,6 +22,8 @@ cmp.setup({
     { name = "nvim_lsp" },
     -- For vsnip users.
     { name = "vsnip" },
+    { name = "cmp_tabnine" },
+    { name = "treesitter" },
 
     -- For luasnip users.
     -- { name = 'luasnip' },

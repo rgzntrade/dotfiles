@@ -56,6 +56,7 @@ packer.startup({function()
   -- telescope 
   use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
   use {"nvim-telescope/telescope-ui-select.nvim"}
+  use { "nvim-telescope/telescope-file-browser.nvim" }
   -- alpha-nvim 
   use "goolord/alpha-nvim"
   -- project
@@ -91,6 +92,7 @@ use {
   use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
   use("hrsh7th/cmp-path") -- { name = 'path' }
   use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+  use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
 
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")

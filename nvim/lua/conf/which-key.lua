@@ -84,6 +84,7 @@ local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Welcome" },
   ["r"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
   ["f"] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
+  ["t"] = { "<cmd>:Telescope file_browser<CR>", "Telescope" },
 }
 
 which_key.setup(setup)
