@@ -111,3 +111,4 @@ telescope.setup({
 })
 
 require("telescope").load_extension("zf-native")
+require("telescope").load_extension("dap")
