@@ -64,8 +64,8 @@ packer.startup({function()
   use "Shatur/neovim-session-manager"
   -- which-key
   use "folke/which-key.nvim"
-  --- zf-native 
-  use "natecraddock/telescope-zf-native.nvim"
+  --- telescope-fzf-native 
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
