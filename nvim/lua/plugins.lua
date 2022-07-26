@@ -101,6 +101,13 @@ use {
   use("theHamsta/nvim-dap-virtual-text")
   use("rcarriga/nvim-dap-ui")
   use ("nvim-telescope/telescope-dap.nvim")
+  -- git
+  use {
+    "lewis6991/gitsigns.nvim",
+    tag = "release",
+  }
+-- Packer
+use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
