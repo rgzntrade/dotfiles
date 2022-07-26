@@ -110,7 +110,12 @@ use {
 use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 -- terminal
 use {"akinsho/toggleterm.nvim",} 
-
+  -- todo 
+-- Lua
+use {
+  "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
