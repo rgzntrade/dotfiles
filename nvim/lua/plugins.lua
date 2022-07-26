@@ -53,6 +53,7 @@ packer.startup({function()
   use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
   -- telescope 
   use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
+  use {"nvim-telescope/telescope-ui-select.nvim"}
   -- alpha-nvim 
   use "goolord/alpha-nvim"
   -- project
@@ -73,6 +74,7 @@ packer.startup({function()
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
   }
+use "romgrk/nvim-treesitter-context"
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎

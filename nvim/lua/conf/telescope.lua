@@ -106,9 +106,15 @@ telescope.setup({
                 -- disable zf filename match priority
                 match_filename = false,
             },
-        }  -- 扩展插件配置
-  },
+        },
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown{
+        -- even more opts
+      },
+    },-- 扩展插件配置
+  }
 })
 
 require("telescope").load_extension("zf-native")
 require("telescope").load_extension("dap")
+require("telescope").load_extension("ui-select")
