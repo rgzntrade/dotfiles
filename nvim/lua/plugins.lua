@@ -106,8 +106,11 @@ use {
     "lewis6991/gitsigns.nvim",
     tag = "release",
   }
--- Packer
+-- dirrview 
 use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+-- terminal
+use {"akinsho/toggleterm.nvim",} 
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
