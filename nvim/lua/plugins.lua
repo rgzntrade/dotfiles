@@ -118,6 +118,9 @@ use {
   "folke/todo-comments.nvim",
   requires = "nvim-lua/plenary.nvim",
 }
+  -- clangd
+use {"p00f/clangd_extensions.nvim"}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
