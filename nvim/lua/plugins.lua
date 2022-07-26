@@ -76,7 +76,8 @@ packer.startup({function()
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
   }
-use "romgrk/nvim-treesitter-context"
+  use ("romgrk/nvim-treesitter-context")
+  use ("nvim-treesitter/nvim-treesitter-textobjects")
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎
