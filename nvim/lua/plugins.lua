@@ -43,6 +43,8 @@ packer.init {
 packer.startup({function()
   -- Packer 可以管理自己本身
   use 'wbthomason/packer.nvim'
+  --  模块缓存
+  use 'lewis6991/impatient.nvim'
   -- 插件列表...
   use('olimorris/onedarkpro.nvim')
   -- 文件管理

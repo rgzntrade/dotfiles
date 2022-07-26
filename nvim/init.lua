@@ -1,3 +1,5 @@
+-- 模块缓存
+require('impatient-config')
 -- nvim基础配置
 require('basic')
 -- 插件管理列表
