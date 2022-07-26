@@ -78,6 +78,9 @@ packer.startup({function()
   }
   use ("romgrk/nvim-treesitter-context")
   use ("nvim-treesitter/nvim-treesitter-textobjects")
+use {
+  "ray-x/lsp_signature.nvim",
+}
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎

@@ -9,7 +9,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 local lspconfig = require("lspconfig")
-local function on_attach(client, bufnr) -- set up buffer keymaps, etc.
+local function on_attach(client, buffer) -- set up buffer keymaps, etc.
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -19,6 +19,7 @@ local function on_attach(client, bufnr) -- set up buffer keymaps, etc.
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  require "lsp_signature".on_attach()
 end
 
 local lsp_flags = {
