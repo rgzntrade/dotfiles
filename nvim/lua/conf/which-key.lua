@@ -85,6 +85,18 @@ local mappings = {
   ["r"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
   ["f"] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
   ["t"] = { "<cmd>:Telescope file_browser<CR>", "Telescope" },
+c = {
+    name = "CMake",
+    g = {"<cmd>CMake configure<CR>", "Configure"},
+    t = {"<cmd>CMake select_target<CR>", "SelectTarget"},
+    T = {"<cmd>CMake select_build_type<CR>", "SelectBuildType"},
+    b = {"<cmd>CMake build<CR>", "BuildTarget"},
+    a = {"<cmd>CMake build_all<CR>", "BuildAll"},
+    r = {"<cmd>CMake build_and_run<CR>", "Run"},
+    d = {"<cmd>CMake build_and_debug<CR>", "DebugTarget"},
+    c = {"<cmd>CMake cancel<CR>", "Cancel"},
+    s = {"<cmd>CMake set_target_args<CR>", "SetArg"},
+  },
 }
 
 which_key.setup(setup)

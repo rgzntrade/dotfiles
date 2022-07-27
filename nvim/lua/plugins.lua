@@ -79,9 +79,9 @@ packer.startup({function()
   }
   use ("romgrk/nvim-treesitter-context")
   use ("nvim-treesitter/nvim-treesitter-textobjects")
-use {
-  "ray-x/lsp_signature.nvim",
-}
+  use {
+    "ray-x/lsp_signature.nvim",
+  }
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎
@@ -108,19 +108,20 @@ use {
     "lewis6991/gitsigns.nvim",
     tag = "release",
   }
--- dirrview 
-use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
--- terminal
-use {"akinsho/toggleterm.nvim",} 
+  -- dirrview 
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  -- terminal
+  use {"akinsho/toggleterm.nvim",} 
   -- todo 
--- Lua
-use {
-  "folke/todo-comments.nvim",
-  requires = "nvim-lua/plenary.nvim",
-}
+  -- Lua
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
   -- clangd
-use {"p00f/clangd_extensions.nvim"}
-
+  use {"p00f/clangd_extensions.nvim"}
+  -- cmake
+  use {"Shatur/neovim-cmake"}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
