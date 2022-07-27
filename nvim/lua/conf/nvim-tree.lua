@@ -70,7 +70,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
       prefer_startup_root = false,
       sync_root_with_cwd = false,
       reload_on_bufenter = false,
-      respect_buf_cwd = false,
+      respect_buf_cwd = true,
       view = {
         adaptive_size = false,
         centralize_selection = false,
