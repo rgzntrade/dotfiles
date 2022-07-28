@@ -132,6 +132,9 @@ packer.startup({function()
   use {"d86leader/vim-cpp-helper"}
   -- translator
   use "voldikss/vim-translator"
+  -- save and reload
+  use "Pocco81/AutoSave.nvim"
+  use "djoshea/vim-autoread"
   --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
