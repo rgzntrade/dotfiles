@@ -93,6 +93,7 @@ packer.startup({function()
   use("hrsh7th/cmp-path") -- { name = 'path' }
   use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
   use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+  use {"windwp/nvim-autopairs"}
 
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
