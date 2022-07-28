@@ -80,3 +80,5 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opt)
 
 -- program
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opt)
+-- file
+keymap("n", "<C-s>", "<cmd>w<cr>", opt)
