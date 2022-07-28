@@ -122,6 +122,11 @@ packer.startup({function()
   use {"p00f/clangd_extensions.nvim"}
   -- cmake
   use {"Shatur/neovim-cmake"}
+  -- hop
+  use {
+    "phaazon/hop.nvim", -- like easymotion, but more powerful
+    branch = "v2", -- optional but strongly recommended
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
