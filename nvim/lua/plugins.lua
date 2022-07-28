@@ -127,6 +127,7 @@ packer.startup({function()
     "phaazon/hop.nvim", -- like easymotion, but more powerful
     branch = "v2", -- optional but strongly recommended
   }
+  use {"d86leader/vim-cpp-helper"}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
