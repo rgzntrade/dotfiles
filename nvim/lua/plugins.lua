@@ -130,6 +130,9 @@ packer.startup({function()
     branch = "v2", -- optional but strongly recommended
   }
   use {"d86leader/vim-cpp-helper"}
+  -- translator
+  use "voldikss/vim-translator"
+  --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
