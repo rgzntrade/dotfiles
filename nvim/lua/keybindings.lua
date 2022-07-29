@@ -82,3 +82,14 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opt)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opt)
 -- file
 keymap("n", "<C-s>", "<cmd>w<cr>", opt)
+-- lspsaga
+--- In lsp attach function
+keymap("n", "gr", "<cmd>Lspsaga rename<cr>", opt)
+keymap("n", "gx", "<cmd>Lspsaga code_action<cr>", opt)
+keymap("x", "gx", ":<c-u>Lspsaga range_code_action<cr>", opt)
+keymap("n", "K",  "<cmd>Lspsaga hover_doc<cr>", opt)
+keymap("n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", opt)
+keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
+keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
+keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
+keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})

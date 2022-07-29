@@ -18,7 +18,7 @@ local function on_attach(client, buffer) -- set up buffer keymaps, etc.
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', 'gR', vim.lsp.buf.references, bufopts)
   require "lsp_signature".on_attach()
 end
 

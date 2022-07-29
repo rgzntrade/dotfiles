@@ -96,6 +96,7 @@ packer.startup({function()
   use {"windwp/nvim-autopairs"}
   use "terrortylor/nvim-comment"
   use {"tpope/vim-surround"}
+  use { 'kkharji/lspsaga.nvim' }  
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
   -- rust-tools
@@ -135,6 +136,7 @@ packer.startup({function()
   -- save and reload
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
+  --
   --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
