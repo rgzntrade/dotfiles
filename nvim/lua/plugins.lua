@@ -140,6 +140,8 @@ packer.startup({function()
   -- save and reload
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
+  -- 管理工具lsp dap linter format
+  use { "williamboman/mason.nvim" }
 
   --
   --
