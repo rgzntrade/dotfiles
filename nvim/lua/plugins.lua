@@ -82,6 +82,10 @@ packer.startup({function()
   use {
     "ray-x/lsp_signature.nvim",
   }
+  use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+}
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎
@@ -136,6 +140,7 @@ packer.startup({function()
   -- save and reload
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
+
   --
   --
   -- Automatically set up your configuration after cloning packer.nvim
