@@ -86,6 +86,7 @@ packer.startup({function()
   "folke/trouble.nvim",
   requires = "kyazdani42/nvim-web-devicons",
 }
+use {'mizlan/iswap.nvim'}
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎
