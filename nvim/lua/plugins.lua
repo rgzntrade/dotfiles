@@ -87,6 +87,7 @@ packer.startup({function()
   requires = "kyazdani42/nvim-web-devicons",
 }
 use {'mizlan/iswap.nvim'}
+use 'booperlv/nvim-gomove'
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎

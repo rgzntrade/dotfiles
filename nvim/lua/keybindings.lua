@@ -48,11 +48,11 @@ keymap("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 
 -- bufferline
 -- 左右Tab切换
-keymap("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
-keymap("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
+keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
+keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
-keymap("n", "<A-w>", ":Bdelete!<CR>", opt)
+keymap("n", "<S-w>", ":Bdelete!<CR>", opt)
 keymap("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 keymap("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 keymap("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
