@@ -83,11 +83,11 @@ packer.startup({function()
     "ray-x/lsp_signature.nvim",
   }
   use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-}
-use {'mizlan/iswap.nvim'}
-use 'booperlv/nvim-gomove'
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+  use {'mizlan/iswap.nvim'}
+  use 'booperlv/nvim-gomove'
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- snippet 引擎
@@ -144,7 +144,15 @@ use 'booperlv/nvim-gomove'
   use "djoshea/vim-autoread"
   -- 管理工具lsp dap linter format
   use { "williamboman/mason.nvim" }
+  use {
+    'sudormrfbin/cheatsheet.nvim',
 
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+    }
+  }
   --
   --
   -- Automatically set up your configuration after cloning packer.nvim
