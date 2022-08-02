@@ -154,7 +154,7 @@ packer.startup({function()
       {'nvim-lua/plenary.nvim'},
     }
   }
-  --
+ use 'karb94/neoscroll.nvim' --
   --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
