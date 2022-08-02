@@ -50,6 +50,9 @@ keymap("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 -- 左右Tab切换
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
+keymap("n", "<S-p>", ":BufferLineTogglePin<CR>", opt)
+keymap("n", "<S-TAB>", ":BufferLineCyclePrev<CR>", opt)
+keymap("n", "<TAB>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
 keymap("n", "<S-w>", ":Bdelete!<CR>", opt)
@@ -89,7 +92,7 @@ keymap("n", "<C-s>", "<cmd>w<cr>", opt)
 keymap("n", "gr", "<cmd>Lspsaga rename<cr>", opt)
 keymap("n", "gx", "<cmd>Lspsaga code_action<cr>", opt)
 keymap("x", "gx", ":<c-u>Lspsaga range_code_action<cr>", opt)
-keymap("n", "H",  "<cmd>Lspsaga hover_doc<cr>", opt)
+keymap("n", "K",  "<cmd>Lspsaga hover_doc<cr>", opt)
 keymap("n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", opt)
 keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
 keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
