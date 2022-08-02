@@ -67,6 +67,9 @@ keymap("n", "<leader>tF", ":Telescope live_grep<CR>", opt)
 keymap("n", "<leader>tb", ":Telescope buffers<CR>", opt)
 keymap("n", "<leader>tm", ":Telescope marks<CR>", opt)
 keymap("n", "<leader>tk", ":Telescope keymaps<CR>", opt)
+keymap("n", "<leader>th", ":Telescope help_tags<CR>", opt)
+keymap("n", "<leader>tr", ":Telescope registers<CR>", opt)
+keymap("n", "<leader>tc", ":Telescope commands<CR>", opt)
 
 -- debug
 keymap("n", "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opt)
