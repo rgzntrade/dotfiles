@@ -59,9 +59,11 @@ keymap("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
 -- 查找文件
-keymap("n", "<leader>f", ":Telescope find_files<CR>", opt)
--- 全局搜索
-keymap("n", "<leader>F", ":Telescope live_grep<CR>", opt)
+keymap("n", "<leader>tf", ":Telescope find_files<CR>", opt)
+keymap("n", "<leader>tF", ":Telescope live_grep<CR>", opt)
+keymap("n", "<leader>tb", ":Telescope buffers<CR>", opt)
+keymap("n", "<leader>tm", ":Telescope marks<CR>", opt)
+keymap("n", "<leader>tk", ":Telescope keymaps<CR>", opt)
 
 -- debug
 keymap("n", "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opt)
@@ -69,7 +71,7 @@ keymap("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[C
 keymap("n", "<leader>dm", "<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", opt)
 keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opt)
 keymap("n", "<Leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opt)
-keymap('n', '<F10>', '<cmd>lua require"debug-dap.dap-util".reload_continue()<CR>', opt)
+keymap('n', '<C-F5>', '<cmd>lua require"debug-dap.dap-util".reload_continue()<CR>', opt)
 keymap("n", "<S-F5>", "<cmd>lua require'dap'.terminate()<cr>", opt)
 keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opt)
 keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<cr>", opt)
@@ -87,9 +89,9 @@ keymap("n", "<C-s>", "<cmd>w<cr>", opt)
 keymap("n", "gr", "<cmd>Lspsaga rename<cr>", opt)
 keymap("n", "gx", "<cmd>Lspsaga code_action<cr>", opt)
 keymap("x", "gx", ":<c-u>Lspsaga range_code_action<cr>", opt)
-keymap("n", "K",  "<cmd>Lspsaga hover_doc<cr>", opt)
+keymap("n", "H",  "<cmd>Lspsaga hover_doc<cr>", opt)
 keymap("n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", opt)
 keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
 keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
-keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
-keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
+-- keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
+-- keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
