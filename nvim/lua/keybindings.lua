@@ -101,3 +101,7 @@ keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
 keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
 -- keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
 -- keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
+
+-- symbol_outline
+keymap("n", "gs", "<cmd>SymbolsOutline<cr>", opt)
+
