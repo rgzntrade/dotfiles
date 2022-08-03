@@ -155,9 +155,9 @@ packer.startup({function()
       {'nvim-lua/plenary.nvim'},
     }
   }
- use 'karb94/neoscroll.nvim' --
- use {'edluffy/specs.nvim'} --
-  use {'rcarriga/nvim-notify'}
+  use 'karb94/neoscroll.nvim' --平滑滚动
+  use {'edluffy/specs.nvim'} --位置提示
+  use {'rcarriga/nvim-notify'} -- 提示框
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

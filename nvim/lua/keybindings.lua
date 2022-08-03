@@ -102,6 +102,10 @@ keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
 -- keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
 -- keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 
+-- format
+keymap("n", "gf", "<cmd>lua vim.lsp.buf.formatting()<cr>", opt)
+keymap("v", "gf", "<cmd>lua vim.lsp.buf.formatting()<cr>", opt)
+
 -- symbol_outline
 keymap("n", "gs", "<cmd>SymbolsOutline<cr>", opt)
 
