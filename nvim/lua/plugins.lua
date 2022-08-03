@@ -104,6 +104,7 @@ packer.startup({function()
   use { 'numToStr/Comment.nvim' }
   use {"tpope/vim-surround"}
   use { 'kkharji/lspsaga.nvim' }  
+  use {'simrat39/symbols-outline.nvim'}
   -- 常见编程语言代码段
   use("rafamadriz/friendly-snippets")
   -- rust-tools
