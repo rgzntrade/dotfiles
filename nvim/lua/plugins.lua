@@ -158,6 +158,9 @@ packer.startup({function()
   use 'karb94/neoscroll.nvim' --平滑滚动
   use {'edluffy/specs.nvim'} --位置提示
   use {'rcarriga/nvim-notify'} -- 提示框
+  -- init.lua
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
