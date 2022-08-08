@@ -160,7 +160,7 @@ packer.startup({function()
   use {'rcarriga/nvim-notify'} -- 提示框
   -- init.lua
   use "lukas-reineke/indent-blankline.nvim"
-
+  use "chentoast/marks.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
