@@ -83,7 +83,7 @@ keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opt)
 keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<cr>", opt)
 keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<cr>", opt)
 keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<cr>", opt)
-keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opt)
+keymap("n", "<leader>K", "<cmd>lua require'dapui'.eval()<cr>", opt)
 -- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opt)
 
 -- program
