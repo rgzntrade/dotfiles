@@ -63,4 +63,9 @@ local DEFAULT_SETTINGS = {
     },
 }
 
-require("mason").setup(DEFAULT_SETTINGS)
+local status, mason = pcall(require, "mason")
+if not status then
+    vim.notify("mason not found!")
+    return
+end
+mason.setup(DEFAULT_SETTINGS)

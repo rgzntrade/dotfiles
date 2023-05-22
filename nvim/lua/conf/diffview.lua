@@ -1,5 +1,10 @@
 
 -- Lua
+local status = pcall(require, "diffview.config")
+if not status then
+  vim.notify("diffview.config not found!")
+  return
+end
 local cb = require 'diffview.config'.diffview_callback
 
 require 'diffview'.setup {
@@ -32,16 +37,16 @@ require 'diffview'.setup {
       width = 35,
       height = 16,
     },
-    log_options = {
-      single_file = {
-        max_count = 512,
-        follow = true,
-      },
-      multi_file = {
-        max_count = 128,
-        -- follow = false   -- `follow` only applies to single-file history
-      },
-    },
+   -- log_options = {
+   --   single_file = {
+   --     max_count = 512,
+   --     follow = true,
+   --   },
+   --   multi_file = {
+   --     max_count = 128,
+   --     -- follow = false   -- `follow` only applies to single-file history
+   --   },
+   -- },
   },
   default_args = { -- Default args prepended to the arg-list for the listed commands
     DiffviewOpen = {},

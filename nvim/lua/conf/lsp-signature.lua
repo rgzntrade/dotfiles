@@ -1,4 +1,8 @@
-
+local status = pcall(require, "lsp_signature")
+if not status then
+  vim.notify("lsp_signature not found!")
+  return
+end
 require "lsp_signature".setup({
   debug = false, -- set to true to enable debug logging
   log_path = vim.fn.stdpath("cache") .. "/lsp_signature.log", -- log dir when debug is on

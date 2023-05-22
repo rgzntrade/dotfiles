@@ -1,3 +1,8 @@
+local status, dap = pcall(require, 'dap')
+if not status then
+  vim.notify('dap not found!')
+  return
+end
 local M = {}
 local function config_dapi_and_sign()
   -- local dap_install = require "dap-install"

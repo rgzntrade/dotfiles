@@ -1,4 +1,9 @@
-require('iswap').setup{
+local status, iswap = pcall(require, 'iswap')
+if not status then
+  vim.notify('iswap not found!')
+  return
+end
+iswap.setup{
   -- The keys that will be used as a selection, in order
   -- ('asdfghjklqwertyuiopzxcvbnm' by default)
   keys = 'qwertyuiop',

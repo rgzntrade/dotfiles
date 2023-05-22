@@ -1,4 +1,9 @@
-require("gomove").setup {
+local status, gomove = pcall(require, 'gomove')
+if not status then
+  vim.notify('gomove not found!')
+  return
+end
+gomove.setup {
   -- whether or not to map default key bindings, (true/false)
   map_defaults = true,
   -- whether or not to reindent lines moved vertically (true/false)

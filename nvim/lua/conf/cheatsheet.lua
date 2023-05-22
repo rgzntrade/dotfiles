@@ -1,3 +1,8 @@
+local status, cheatsheet = pcall(require, "cheatsheet")
+if not status then
+    vim.notify("cheatsheet not found!")
+    return
+end
 require("cheatsheet").setup({
     -- Whether to show bundled cheatsheets
 

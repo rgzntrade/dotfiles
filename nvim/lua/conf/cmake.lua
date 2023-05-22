@@ -17,7 +17,11 @@
 -- create_project	Create new CMake project.
 -- cancel	Cancel current running CMake action like build or run.
 
-local Path = require('plenary.path')
+local status, Path = pcall(require, 'plenary.path')
+if not status then
+  vim.notify("plenary.path")
+  return
+end
 local status_ok, cmake = pcall(require, "cmake")
 if not status_ok then
   vim.notify("cmake not found!")

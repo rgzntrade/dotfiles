@@ -1,3 +1,8 @@
+local status, rust_tools = pcall(require, "rust-tools")
+if not status then
+  vim.notify("rust-tool not found!")
+  return
+end
 -- Update this path
 local extension_path = vim.env.HOME .. '/.vscode/extensions/'
 extension_path = string.gsub(extension_path, '\\','/')
@@ -209,4 +214,4 @@ local opts = {
   },
 }
 
-require('rust-tools').setup(opts)
+rust_tools.setup(opts)

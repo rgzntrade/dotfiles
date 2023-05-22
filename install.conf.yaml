@@ -2,7 +2,7 @@
     link:
       relink: true
 
-- clean: ['%localappdata%']
+- clean: ['$HOME/.config']
 
 - link:
-    "%localappdata%/nvim": nvim
+    "$HOME/.config/nvim": nvim

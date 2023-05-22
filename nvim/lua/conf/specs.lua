@@ -1,4 +1,9 @@
-require('specs').setup{ 
+local statsu, specs = pcall(require, "specs")
+if not status then
+  vim.notify("specs not found!")
+  return
+end
+specs.setup{ 
     show_jumps  = true,
     min_jump = 1,
     popup = {
@@ -7,8 +12,8 @@ require('specs').setup{
         blend = 0, -- starting blend, between 0-100 (fully transparent), see :h winblend
         width = 20,
         winhl = "PMenu",
-        fader = require('specs').linear_fader,
-        resizer = require('specs').slide_resizer,
+        fader = specs.linear_fader,
+        resizer = specs.slide_resizer,
     },
     ignore_filetypes = {},
     ignore_buftypes = {

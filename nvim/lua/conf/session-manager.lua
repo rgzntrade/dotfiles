@@ -1,4 +1,8 @@
-local Path = require('plenary.path')
+local status, Path = pcall(require, 'plenary.path')
+if not status then
+  vim.notify("plenary.path not found~")
+  return
+end
 local status_ok, session_manager = pcall(require, "session_manager")
 if not status_ok then
   vim.notify("session_manager not found!")

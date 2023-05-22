@@ -1,4 +1,9 @@
-local lspsaga = require 'lspsaga'
+local status, lspsaga = pcall(require, 'lspsaga')
+if not status then
+  vim.notify("lspsaga not found!")
+  return
+end
+
 lspsaga.setup { -- defaults ...
   debug = false,
   use_saga_diagnostic_sign = true,

@@ -1,3 +1,8 @@
+local status, notify = pcall(require, "notify")
+if not status then
+  vim.notify("notify not found!")
+  return
+end
 require("notify").setup({
   -- Animation style (see below for details)
   stages = "fade_in_slide_out",

@@ -1,4 +1,9 @@
-require("nvim-lsp-installer").setup{}
+local status, nvim_lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status then
+  vim.notify("nvim-lsp-installer")
+  return
+end
+nvim_lsp_installer.setup{}
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -29,7 +34,7 @@ local lsp_flags = {
 -- Setup lspconfig.
 -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 --
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   -- capabilities = capabilities,
