@@ -99,14 +99,15 @@ packer.startup({function()
   use("hrsh7th/cmp-path") -- { name = 'path' }
   use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
-local path_sep = package.config:sub(1, 1)
-if path_sep == '\\' then
-      use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
-elseif path_sep == '/' then
-      use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
-else
-    print("Unknown OS")
-end
+  local path_sep = package.config:sub(1, 1)
+  if path_sep == '\\' then
+        use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+  elseif path_sep == '/' then
+        use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  else
+      print("Unknown OS")
+  end
+  print("查看有没有其它问题,这个消息每次都能看到")
   use {"windwp/nvim-autopairs"}
   -- use "terrortylor/nvim-comment"
   use { 'numToStr/Comment.nvim' }

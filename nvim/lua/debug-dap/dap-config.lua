@@ -89,4 +89,4 @@ function M.setup()
   config_debuggers() -- Debugger
 end
 
-return M
+M.setup()
