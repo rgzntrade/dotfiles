@@ -1,2 +1,4 @@
 # packer 安装产生的文件
 nvim/plugin/packer_compiled.lua
+# tmux 插件
+tmux/plugins/
