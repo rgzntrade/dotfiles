@@ -2,6 +2,8 @@
 local keymap = vim.api.nvim_set_keymap
 -- 复用 opt 参数
 local opt = {noremap = true, silent = true }
+-- mac、windows兼容
+local mod = vim.fn.has('mac') == 1 and '<M-' or '<A-'
 -- Leader Key
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
@@ -29,10 +31,10 @@ keymap("n", "s=", "<C-w>=", opt)
 keymap("v", "<", "<gv", opt)
 keymap("v", ">", ">gv", opt)
 -- 上下移动选中文本
-keymap("i", "<A-j>", "<Esc>:m .+1<CR>==i", opt)
-keymap("i", "<A-k>", "<Esc>:m .-2<CR>==i", opt)
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opt)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opt)
+keymap("i", mod.."j>", "<Esc>:m .+1<CR>==i", opt)
+keymap("i", mod.."k>", "<Esc>:m .-2<CR>==i", opt)
+keymap("n", mod.."j>", "<Esc>:m .+1<CR>==", opt)
+keymap("n", mod.."k>", "<Esc>:m .-2<CR>==", opt)
 -- ctrl u / ctrl + d  只移动9行，默认移动半屏
 keymap("n", "<C-u>", "9k", opt)
 keymap("n", "<C-d>", "9j", opt)
@@ -44,7 +46,7 @@ keymap("i", "<C-l>", "<ESC>A", opt)
 
 -- nvim-tree
 -- -- alt + m 键打开关闭tree
-keymap("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+keymap("n", mod.."m>", ":NvimTreeToggle<CR>", opt)
 
 -- bufferline
 -- 左右Tab切换
@@ -87,7 +89,7 @@ keymap("n", "<leader>K", "<cmd>lua require'dapui'.eval()<cr>", opt)
 -- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opt)
 
 -- program
-keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opt)
+keymap("n", mod.."o>", "<cmd>ClangdSwitchSourceHeader<cr>", opt)
 -- file
 keymap("n", "<C-s>", "<cmd>w<cr>", opt)
 -- lspsaga
