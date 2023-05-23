@@ -126,7 +126,7 @@ packer.startup({function()
   -- git
   use {
     "lewis6991/gitsigns.nvim",
-    tag = "release",
+    tag = "v0.6",
   }
   -- dirrview 
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
