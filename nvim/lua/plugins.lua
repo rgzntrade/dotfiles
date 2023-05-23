@@ -16,15 +16,15 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- 每次保存 plugins.lua 自动安装插件
-pcall(
-  vim.cmd,
-  [[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
-]]
-)
+-- pcall(
+--  vim.cmd,
+--   [[
+-- augroup packer_user_config
+-- autocmd!
+-- autocmd BufWritePost plugins.lua source <afile> | PackerSync
+-- augroup end
+-- ]]
+-- )
 
 -- packer 安装准备就绪前直接返回
 local status_ok, packer = pcall(require, "packer")
@@ -98,7 +98,15 @@ packer.startup({function()
   use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
   use("hrsh7th/cmp-path") -- { name = 'path' }
   use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
-  use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+
+local path_sep = package.config:sub(1, 1)
+if path_sep == '\\' then
+      use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+elseif path_sep == '/' then
+      use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+else
+    print("Unknown OS")
+end
   use {"windwp/nvim-autopairs"}
   -- use "terrortylor/nvim-comment"
   use { 'numToStr/Comment.nvim' }
