@@ -4,3 +4,4 @@ nvim/plugin/packer_compiled.lua
 tmux/plugins/
 nvim/plugin/
 nvim/lua/.luarc.json
+.luarc.json

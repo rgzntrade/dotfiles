@@ -57,6 +57,7 @@ packer.startup({function()
   use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
   use {"nvim-telescope/telescope-ui-select.nvim"}
   use { "nvim-telescope/telescope-file-browser.nvim" }
+  use { "nvim-telescope/telescope-project.nvim" }
   -- alpha-nvim 
   use "goolord/alpha-nvim"
   -- project
@@ -66,8 +67,6 @@ packer.startup({function()
   -- which-key
   use "folke/which-key.nvim"
   use "mrjones2014/legendary.nvim"
-  --- telescope-fzf-native 
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -124,6 +123,11 @@ packer.startup({function()
   use("theHamsta/nvim-dap-virtual-text")
   use("rcarriga/nvim-dap-ui")
   use ("nvim-telescope/telescope-dap.nvim")
+  use ("nvim-telescope/telescope-packer.nvim")
+  use {
+    "nvim-telescope/telescope-frecency.nvim", requires = {"kkharji/sqlite.lua"}
+  }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   -- git
   use {
     "lewis6991/gitsigns.nvim",
