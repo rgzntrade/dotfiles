@@ -8,3 +8,7 @@ neovim配置
 # tmux
 ## 插件
 - tmux-cssh插件需要创建链接使用
+
+# zsh
+## 安装依赖
+- autojump 
