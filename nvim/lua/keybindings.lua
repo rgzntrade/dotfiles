@@ -8,25 +8,25 @@ local mod = vim.fn.has('mac') == 1 and '<M-' or '<A-'
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 -- windows 分屏快捷键
-keymap("n", "sv", ":vsp<CR>", opt)
-keymap("n", "sh", ":sp<CR>", opt)
+keymap("n", "<leader>v", ":vsp<CR>", opt)
+keymap("n", "<leader>h", ":sp<CR>", opt)
 -- 关闭当前
-keymap("n", "sc", "<C-w>c", opt)
+keymap("n", "<leader>c", "<C-w>c", opt)
 -- 关闭其他
-keymap("n", "so", "<C-w>o", opt)
+keymap("n", "<leader>o", "<C-w>o", opt)
 -- Ctrl + hjkl  窗口之间跳转
 keymap("n", "<C-h>", "<C-w>h", opt)
 keymap("n", "<C-j>", "<C-w>j", opt)
 keymap("n", "<C-k>", "<C-w>k", opt)
 keymap("n", "<C-l>", "<C-w>l", opt)
 -- 左右比例控制
-keymap("n", "s]", ":vertical resize -20<CR>", opt)
-keymap("n", "s[", ":vertical resize +20<CR>", opt)
+keymap("n", "<leader>]", ":vertical resize -20<CR>", opt)
+keymap("n", "<leader>[", ":vertical resize +20<CR>", opt)
 -- 上下比例
-keymap("n", "s.", ":resize +10<CR>", opt)
-keymap("n", "s,", ":resize -10<CR>", opt)
+keymap("n", "<leader>.", ":resize +10<CR>", opt)
+keymap("n", "<leader>,", ":resize -10<CR>", opt)
 -- 等比例
-keymap("n", "s=", "<C-w>=", opt)
+keymap("n", "<leader>=", "<C-w>=", opt)
 -- visual模式下缩进代码
 keymap("v", "<", "<gv", opt)
 keymap("v", ">", ">gv", opt)

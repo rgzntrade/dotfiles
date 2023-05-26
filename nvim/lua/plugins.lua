@@ -147,11 +147,13 @@ packer.startup({function()
   use {"p00f/clangd_extensions.nvim"}
   -- cmake
   use {"Shatur/neovim-cmake"}
-  -- hop
+  --  motion
   use {
     "phaazon/hop.nvim", -- like easymotion, but more powerful
     branch = "v2", -- optional but strongly recommended
   }
+  use {'ggandor/leap.nvim', require = 'tpope/vim-repeat'}
+
   use {"d86leader/vim-cpp-helper"}
   -- translator
   use "voldikss/vim-translator"
