@@ -8,22 +8,22 @@ legendary.setup({
     -- map keys to a command
     { '<leader>ff', ':Telescope find_files', description = 'Find files' },
     -- map keys to a function
-    {
-      '<leader>h',
-      function()
-        print('hello world!')
-      end,
-      description = 'Say hello',
-    },
+    -- {
+    --   '<leader>h',
+    --   function()
+    --     print('hello world!')
+    --   end,
+    --   description = 'Say hello',
+    -- },
     -- Set options used during keymap creation
-    { '<leader>s', ':SomeCommand<CR>', description = 'Non-silent keymap', opts = { silent = true } },
+    -- { '<leader>s', ':SomeCommand<CR>', description = 'Non-silent keymap', opts = { silent = true } },
     -- create keymaps with different implementations per-mode
-    {
-      '<leader>c',
-      { n = ':LinewiseCommentToggle<CR>', x = ":'<,'>BlockwiseCommentToggle<CR>" },
+    -- {
+    --   '<leader>c',
+    --   { n = ':LinewiseCommentToggle<CR>', x = ":'<,'>BlockwiseCommentToggle<CR>" },
 
-      description = 'Toggle comment',
-    },
+    --   description = 'Toggle comment',
+    -- },
     -- create item groups to create sub-menus in the finder
     -- note that only keymaps, commands, and functions
     -- can be added to item groups

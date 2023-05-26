@@ -15,10 +15,10 @@ keymap("n", "<leader>c", "<C-w>c", opt)
 -- 关闭其他
 keymap("n", "<leader>o", "<C-w>o", opt)
 -- Ctrl + hjkl  窗口之间跳转
-keymap("n", "<C-h>", "<C-w>h", opt)
-keymap("n", "<C-j>", "<C-w>j", opt)
-keymap("n", "<C-k>", "<C-w>k", opt)
-keymap("n", "<C-l>", "<C-w>l", opt)
+keymap("n", "<leader>wh", "<C-w>h", opt)
+keymap("n", "<leader>wj", "<C-w>j", opt)
+keymap("n", "<leader>wk", "<C-w>k", opt)
+keymap("n", "<leader>wl", "<C-w>l", opt)
 -- 左右比例控制
 keymap("n", "<leader>]", ":vertical resize -20<CR>", opt)
 keymap("n", "<leader>[", ":vertical resize +20<CR>", opt)

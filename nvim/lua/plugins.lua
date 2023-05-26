@@ -111,7 +111,7 @@ packer.startup({function()
   use {"windwp/nvim-autopairs"}
   -- use "terrortylor/nvim-comment"
   use { 'numToStr/Comment.nvim' }
-  use {"tpope/vim-surround"}
+  use {"kylechui/nvim-surround"}
   use { 'kkharji/lspsaga.nvim' }  
   use {'simrat39/symbols-outline.nvim'}
   -- 常见编程语言代码段
