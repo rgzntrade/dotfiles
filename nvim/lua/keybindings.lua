@@ -20,13 +20,13 @@ keymap("n", "<leader>wj", "<C-w>j", opt)
 keymap("n", "<leader>wk", "<C-w>k", opt)
 keymap("n", "<leader>wl", "<C-w>l", opt)
 -- 左右比例控制
-keymap("n", "<leader>]", ":vertical resize -20<CR>", opt)
-keymap("n", "<leader>[", ":vertical resize +20<CR>", opt)
+keymap("n", "<leader><leader>l", ":vertical resize -20<CR>", opt)
+keymap("n", "<leader><leader>h", ":vertical resize +20<CR>", opt)
 -- 上下比例
-keymap("n", "<leader>.", ":resize +10<CR>", opt)
-keymap("n", "<leader>,", ":resize -10<CR>", opt)
+keymap("n", "<leader><leader>k", ":resize +10<CR>", opt)
+keymap("n", "<leader><leader>j", ":resize -10<CR>", opt)
 -- 等比例
-keymap("n", "<leader>=", "<C-w>=", opt)
+keymap("n", "<leader><leader>=", "<C-w>=", opt)
 -- visual模式下缩进代码
 keymap("v", "<", "<gv", opt)
 keymap("v", ">", ">gv", opt)
@@ -109,5 +109,5 @@ keymap("n", "gf", "<cmd>lua vim.lsp.buf.formatting()<cr>", opt)
 keymap("v", "gf", "<cmd>lua vim.lsp.buf.formatting()<cr>", opt)
 
 -- symbol_outline
-keymap("n", "gs", "<cmd>SymbolsOutline<cr>", opt)
+keymap("n", "<leader>gs", "<cmd>SymbolsOutline<cr>", opt)
 

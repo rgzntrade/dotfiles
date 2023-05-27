@@ -34,11 +34,11 @@ window:
   #  columns: 0
   #  lines: 0
 
-  # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   #position:
+  # Window position (changes require restart)
   #  x: 0
   #  y: 0
 
@@ -196,34 +196,40 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (One Dark)
+# Colors - https://github.com/olimorris/onedarkpro.nvim
 colors:
-  # Default colors
   primary:
-    background: '#1e2127'
+    background: '#282c34'
     foreground: '#abb2bf'
 
-  # Normal colors
   normal:
-    black:   '#5c6370'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#e5c07b'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#abb2bf'
+    black:      '#282c34'
+    red:        '#e06c75'
+    green:      '#98c379'
+    yellow:     '#e5c07b'
+    blue:       '#61afef'
+    magenta:    '#c678dd'
+    cyan:       '#56b6c2'
+    white:      '#abb2bf'
 
-  # Bright colors
   bright:
-    black:   '#5c6370'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#e5c07b'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#ffffff'
+    black:      '#3e4451'
+    red:        '#e9969d'
+    green:      '#b3d39c'
+    yellow:     '#edd4a6'
+    blue:       '#8fc6f4'
+    magenta:    '#d7a1e7'
+    cyan:       '#7bc6d0'
+    white:      '#c8cdd5'
+
+  cursor:
+    text: CellBackground
+    cursor: CellForeground # syntax-cursor-color
+
+  selection:
+    text: CellForeground
+    background: '#5c6370'
+
 # Colors (Tomorrow Night)
 #colors:
   # Default colors
