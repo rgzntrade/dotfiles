@@ -91,8 +91,8 @@ packer.startup({function()
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
   -- 补全源
-  use("hrsh7th/cmp-vsnip")
   use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+  use("saadparwaiz1/cmp_luasnip") -- { name = cmp_luasnip}
   use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
   use("hrsh7th/cmp-path") -- { name = 'path' }
   use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
