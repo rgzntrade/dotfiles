@@ -72,11 +72,6 @@ packer.startup({function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  --  nvim-lspconfig and installer 
-  use {
-    "williamboman/nvim-lsp-installer",
-    "neovim/nvim-lspconfig",
-  }
   use ("romgrk/nvim-treesitter-context")
   use ("nvim-treesitter/nvim-treesitter-textobjects")
   use {
@@ -167,6 +162,8 @@ packer.startup({function()
   use "djoshea/vim-autoread"
   -- 管理工具lsp dap linter format
   use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "neovim/nvim-lspconfig" }
   use {
     'sudormrfbin/cheatsheet.nvim',
 
@@ -183,6 +180,7 @@ packer.startup({function()
   use "lukas-reineke/indent-blankline.nvim"
   use "chentoast/marks.nvim"
   use { 'NvChad/nvim-colorizer.lua'}
+  use { 'RRethy/vim-illuminate'}
   use { "Tastyep/structlog.nvim" }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
