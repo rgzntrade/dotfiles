@@ -1,14 +1,17 @@
 
-local dap = require('dap')
-
+local status, dap = pcall(require, 'dap')
+if not status then
+  vim.notify('dap not found!')
+  return
+end
+vim.notify(vim.env.HOME)
 dap.adapters.codelldb = {
   type = 'server',
   port =  "${port}",
   executable = {
     -- CHANGE THIS to your path!
     -- pvim.notify("rust-tools")
-    command = vim.env.HOME .. '/.vscode/extensions/' .. 'vadimcn.vscode-lldb-1.7.3/adapter/codelldb.exe',
-    -- command = vim.fn "data" .. 'dapinstall/codelldb-x86_64-windows/codelldb/extension/adapter/codelldb.exe',
+    command = vim.env.HOME .. '/.config/nvim/debug/mac/' .. 'extension/adapter/codelldb',
     args = {"--port", "${port}"},
 
     -- On windows you may have to uncomment this:
@@ -16,7 +19,7 @@ dap.adapters.codelldb = {
   }
 }
 
-vim.notify("dap-config")
+-- vim.notify("dap-config")
 
 dap.configurations.rust = {
   -- launch exe
