@@ -98,6 +98,11 @@ export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
 # else
 #   export EDITOR='mvim'
 # fi
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR='nvim'
+else
+    export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
