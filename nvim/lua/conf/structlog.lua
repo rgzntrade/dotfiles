@@ -40,7 +40,7 @@ log.configure({
           "%s [%s] %s: %-30s",
           { "timestamp", "level", "logger_name", "msg" }
         ),
-        sink = log.sinks.File("./test.log"),
+        sink = log.sinks.File("./nvim/log/event.log"),
       },
     },
   },

@@ -5,3 +5,4 @@ tmux/plugins/
 nvim/plugin/
 nvim/lua/.luarc.json
 .luarc.json
+nvim/log/
