@@ -2,12 +2,12 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "zsh/ohmyzsh/plugins/sh-syntax-highlighting"]
-	path = zsh/ohmyzsh/plugins/sh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "zsh/ohmyzsh/plugins/zsh-autosuggestions"]
 	path = zsh/ohmyzsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule "zsh/ohmyzsh/themes/powerlevel10k"]
 	path = zsh/ohmyzsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
+[submodule "zsh/ohmyzsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/ohmyzsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
