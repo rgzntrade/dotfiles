@@ -90,8 +90,6 @@ packer.startup({function()
   use 'booperlv/nvim-gomove'
   -- 补全引擎
   use("hrsh7th/nvim-cmp")
-  -- snippet 引擎
-  use("hrsh7th/vim-vsnip")
   -- 补全源
   use("hrsh7th/cmp-vsnip")
   use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
@@ -114,8 +112,15 @@ packer.startup({function()
   use {"kylechui/nvim-surround"}
   use { 'kkharji/lspsaga.nvim' }  
   use {'simrat39/symbols-outline.nvim'}
-  -- 常见编程语言代码段
+  -- snippet 引擎
   use("rafamadriz/friendly-snippets")
+  use({
+  	"L3MON4D3/LuaSnip",
+  	-- follow latest release.
+  	tag = "v1.2.1", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+  	-- install jsregexp (optional!:).
+  	-- run = "make install_jsregexp"
+  })
   -- rust-tools
   use {"simrat39/rust-tools.nvim" }
   -- debug
@@ -178,6 +183,7 @@ packer.startup({function()
   use "lukas-reineke/indent-blankline.nvim"
   use "chentoast/marks.nvim"
   use { 'NvChad/nvim-colorizer.lua'}
+  use { "Tastyep/structlog.nvim" }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

@@ -9,10 +9,10 @@ cmp.setup({
   snippet = {
     expand = function(args)
       -- For `vsnip` users.
-      vim.fn["vsnip#anonymous"](args.body)
+      -- vim.fn["vsnip#anonymous"](args.body)
 
       -- For `luasnip` users.
-      -- require('luasnip').lsp_expand(args.body)
+      require('luasnip').lsp_expand(args.body)
 
       -- For `ultisnips` users.
       -- vim.fn["UltiSnips#Anon"](args.body)
@@ -30,7 +30,7 @@ cmp.setup({
     { name = "treesitter" },
 
     -- For luasnip users.
-    -- { name = 'luasnip' },
+    { name = 'luasnip' },
 
     --For ultisnips users.
     -- { name = 'ultisnips' },
@@ -68,11 +68,11 @@ cmp.setup({
     end, {"i", "s"}),
 
     -- 自定义代码段跳转到上一个参数
-    ["<C-h>"] = cmp.mapping(function()
-      if vim.fn["vsnip#jumpable"](-1) == 1 then
-        feedkey("<Plug>(vsnip-jump-prev)", "")
-      end
-    end, {"i", "s"}),
+    -- ["<C-h>"] = cmp.mapping(function()
+    --   if vim.fn["vsnip#jumpable"](-1) == 1 then
+    --     feedkey("<Plug>(vsnip-jump-prev)", "")
+    --   end
+    -- end, {"i", "s"}),
 
     -- Super Tab
     ["<Tab>"] = cmp.mapping(function(fallback)
