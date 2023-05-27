@@ -177,6 +177,7 @@ packer.startup({function()
   -- init.lua
   use "lukas-reineke/indent-blankline.nvim"
   use "chentoast/marks.nvim"
+  use { 'NvChad/nvim-colorizer.lua'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
