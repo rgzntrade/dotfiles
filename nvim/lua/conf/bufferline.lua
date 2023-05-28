@@ -6,7 +6,47 @@ end
 
 bufferline.setup ({
     options = {
-    mode = "buffers", -- set to "tabs" to only show tabpages instead
+    hover = {
+       enabled = true,
+       delay = 200,
+       reveal = {'close'}
+    },
+    highlight = {
+      tab_separator_selected = {
+        -- fg = '<colour-value-here>',
+        -- bg = '<colour-value-here>',
+        -- sp = '<colour-value-here>',
+        underline = '#FF0000',
+      },
+    },
+    groups = {
+    options = {
+      toggle_hidden_on_enter = true -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
+    },
+    -- items = {
+    --   {
+    --     name = "Tests", -- Mandatory
+    --     highlight = {underline = true, sp = "blue"}, -- Optional
+    --     priority = 2, -- determines where it will appear relative to other groups (Optional)
+    --     icon = "", -- Optional
+    --     matcher = function(buf) -- Mandatory
+    --       return buf.filename:match('%_test') or buf.filename:match('%_spec')
+    --     end,
+    --   },
+    --   {
+    --     name = "Docs",
+    --     highlight = {undercurl = true, sp = "green"},
+    --     auto_close = false,  -- whether or not close this group if it doesn't contain the current buffer
+    --     matcher = function(buf)
+    --       return buf.filename:match('%.md') or buf.filename:match('%.txt')
+    --     end,
+    --     separator = { -- Optional
+    --       style = require('bufferline.groups').separator.tab
+    --     },
+    --   }
+    -- }
+   },
+    mode = "buffer", -- set to "tabs" to only show tabpages instead
     numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     --- @deprecated, please specify numbers as a function to customize the styling
     -- number_style = "superscript", --| "subscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
@@ -18,7 +58,11 @@ bufferline.setup ({
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
     indicator_icon = '▎',
-    buffer_close_icon = '',
+    indicator = {
+        icon = '▎', -- this should be omitted if indicator style is not 'icon'
+        style = 'underline' -- 'icon' | 'underline' | 'none',
+    },
+    buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
     left_trunc_marker = '',
@@ -69,7 +113,7 @@ bufferline.setup ({
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "thin", --| "slant" | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "slant", --| "slant" | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = false, --| true,
     always_show_bufferline = true, -- | false,
     sort_by =  'directory',  -- ,'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
