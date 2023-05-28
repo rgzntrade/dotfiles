@@ -8,7 +8,7 @@ mason_lspconfig.setup{
     -- This setting has no relation with the `automatic_installation` setting.
     ---@type string[]
     ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "cmake",
-        "lemminx", "marksman", "taplo", "pyright" },
+        "lemminx", "marksman", "taplo", "pylyzer" },
 
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
     -- This setting has no relation with the `ensure_installed` setting.
@@ -61,7 +61,7 @@ lspconfig.lua_ls.setup {
   settings = require("lsp.lua"),
 }
 
-lspconfig.pyright.setup {
+lspconfig.pylyzer.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   -- capabilities = capabilities,
