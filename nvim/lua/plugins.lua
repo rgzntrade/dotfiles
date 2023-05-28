@@ -125,7 +125,11 @@ packer.startup({function()
   -- rust-tools
   use {"simrat39/rust-tools.nvim" }
   -- debug
-  use("mfussenegger/nvim-dap")
+  use {
+    "williamboman/mason.nvim",
+    "mfussenegger/nvim-dap",
+    "jay-babu/mason-nvim-dap.nvim",
+  }
   use("theHamsta/nvim-dap-virtual-text")
   use("rcarriga/nvim-dap-ui")
   use ("nvim-telescope/telescope-dap.nvim")
