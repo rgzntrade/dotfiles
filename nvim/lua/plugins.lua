@@ -195,6 +195,11 @@ packer.startup({function()
   use {"folke/noice.nvim", requires = {"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"}}
   -- init.lua
   use "lukas-reineke/indent-blankline.nvim"
+  -- using packer.nvim
+  use {
+    'nmac427/guess-indent.nvim',
+    config = function() require('guess-indent').setup {} end,
+  }
   use "chentoast/marks.nvim"
   use { 'NvChad/nvim-colorizer.lua'}
   use { 'RRethy/vim-illuminate'}
