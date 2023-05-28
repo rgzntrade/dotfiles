@@ -165,6 +165,14 @@ packer.startup({function()
         "nvim-telescope/telescope.nvim" -- Optional
     }
   }
+  use({
+  "dnlhc/glance.nvim",
+  -- config = function()
+  --   require('glance').setup({
+  --     -- your configuration
+  --   })
+  -- end,
+  })
   use {'simrat39/symbols-outline.nvim'}
   -- cmake
   use {"Shatur/neovim-cmake"}
