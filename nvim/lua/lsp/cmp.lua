@@ -3,7 +3,11 @@ if not status then
   vim.notify("cmp not found!")
   return
 end
-
+local status, luasnip = pcall(require, "luasnip")
+if not status then
+  vim.notify("luasnip not found!")
+  return
+end
 cmp.setup({
   -- 指定 snippet 引擎
   snippet = {
@@ -25,7 +29,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     -- For vsnip users.
-    { name = "vsnip" },
+    -- { name = "vsnip" },
     { name = "cmp_tabnine" },
     { name = "treesitter" },
 
@@ -78,8 +82,8 @@ cmp.setup({
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      -- elseif vim.fn["vsnip#available"](1) == 1 then
-      --   feedkey("<Plug>(vsnip-expand-or-jump)", "")
+      elseif luasnip.expand_or_jumpable() then
+          luasnip.expand_or_jump()
       elseif has_words_before() then
         cmp.complete()
       else
@@ -90,8 +94,8 @@ cmp.setup({
     ["<S-Tab>"] = cmp.mapping(function()
       if cmp.visible() then
         cmp.select_prev_item()
-      -- elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-      --   feedkey("<Plug>(vsnip-jump-prev)", "")
+      elseif luasnip.jumpable(-1) then
+          luasnip.jump(-1)
       end
     end, {"i", "s"})
     -- end of super Tab
