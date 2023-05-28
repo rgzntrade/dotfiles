@@ -3,7 +3,7 @@ if not status then
   vim.notify("structlog not found!")
   return
 end
-
+local home = os.getenv("HOME")
 log.configure({
   my_logger = {
     pipelines = {
@@ -40,13 +40,13 @@ log.configure({
           "%s [%s] %s: %-30s",
           { "timestamp", "level", "logger_name", "msg" }
         ),
-        sink = log.sinks.File("./nvim/log/event.log"),
+        sink = log.sinks.File(home .. "/.config/nvim/log/event.log"),
       },
     },
   },
   -- other_logger = {...}
-})
+}) 
 
-local logger = log.get_logger("my_logger")
-logger:info("A log message")
-logger:warn("A log message with keyword arguments", { warning = "something happened" })
+-- local logger = log.get_logger("my_logger")
+-- logger:info("A log message")
+-- logger:warn("A log message with keyword arguments", { warning = "something happened" })

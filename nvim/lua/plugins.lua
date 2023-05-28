@@ -113,7 +113,6 @@ packer.startup({function()
         {"nvim-treesitter/nvim-treesitter"}
     }
   }
-  use {'simrat39/symbols-outline.nvim'}
   -- snippet 引擎
   use("rafamadriz/friendly-snippets")
   use({
@@ -162,6 +161,7 @@ packer.startup({function()
         "nvim-telescope/telescope.nvim" -- Optional
     }
   }
+  use {'simrat39/symbols-outline.nvim'}
   -- cmake
   use {"Shatur/neovim-cmake"}
   --  motion
