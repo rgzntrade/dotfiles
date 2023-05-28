@@ -6,3 +6,4 @@
 
 - link:
     "%localappdata%/nvim": nvim
+    "%localappdata%/nvim/NvChad": nvim_nc
