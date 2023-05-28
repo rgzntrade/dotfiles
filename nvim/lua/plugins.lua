@@ -185,7 +185,7 @@ packer.startup({function()
   }
   use 'karb94/neoscroll.nvim' --平滑滚动
   use {'edluffy/specs.nvim'} --位置提示
-  use {'rcarriga/nvim-notify'} -- 提示框
+  use {"folke/noice.nvim", requires = {"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"}}
   -- init.lua
   use "lukas-reineke/indent-blankline.nvim"
   use "chentoast/marks.nvim"
