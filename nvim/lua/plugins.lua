@@ -145,6 +145,16 @@ packer.startup({function()
   }
   -- clangd
   use {"p00f/clangd_extensions.nvim"}
+  use {
+    "SmiteshP/nvim-navbuddy",
+    requires = {
+        "neovim/nvim-lspconfig",
+        "SmiteshP/nvim-navic",
+        "MunifTanjim/nui.nvim",
+        "numToStr/Comment.nvim",        -- Optional
+        "nvim-telescope/telescope.nvim" -- Optional
+    }
+  }
   -- cmake
   use {"Shatur/neovim-cmake"}
   --  motion
