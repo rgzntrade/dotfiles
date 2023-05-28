@@ -190,6 +190,8 @@ packer.startup({function()
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
   -- 管理工具lsp dap linter format
+  use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+  use({ "jay-babu/mason-null-ls.nvim" })
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "neovim/nvim-lspconfig" }
