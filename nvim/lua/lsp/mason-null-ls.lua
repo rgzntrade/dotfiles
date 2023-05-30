@@ -6,6 +6,6 @@ end
 
 mason_null_ls.setup({
     ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "cmake",
-        "lemminx", "marksman", "taplo", "pylyzer" },
+        "pylint", "marksman", "taplo", "pylyzer" },
     automatic_installation = true,
 })
