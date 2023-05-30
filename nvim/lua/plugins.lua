@@ -58,6 +58,7 @@ packer.startup({function()
   use {"nvim-telescope/telescope-ui-select.nvim"}
   use { "nvim-telescope/telescope-file-browser.nvim" }
   use { "nvim-telescope/telescope-project.nvim" }
+  use {'stevearc/dressing.nvim'}
   -- alpha-nvim 
   use "goolord/alpha-nvim"
   -- project
