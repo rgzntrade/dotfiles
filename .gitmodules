@@ -20,3 +20,6 @@
 [submodule "nvim/UP"]
 	path = nvim/UP
 	url = git@github.com:rgzntrade/UP.git
+[submodule "nvim/LazyVim"]
+	path = nvim/LazyVim
+	url = https://github.com/LazyVim/LazyVim.git
