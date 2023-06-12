@@ -6,6 +6,8 @@
 
 - link:
     "$HOME/.config/nvim": nvim
+    "$HOME/.config/nvim_nv": nvim/NvChad
+    "$HOME/.config/nvim_up": nvim/UP
     "$HOME/.zshrc": zsh/zshrc
     "$HOME/.config/tmux": tmux
     "$HOME/.config/gitui": gitui 

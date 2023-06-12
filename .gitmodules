@@ -17,3 +17,6 @@
 [submodule "nvim/NvChad"]
 	path = nvim/NvChad
 	url = git@github.com:rgzntrade/NvChad.git
+[submodule "nvim/UP"]
+	path = nvim/UP
+	url = git@github.com:rgzntrade/UP.git
