@@ -158,3 +158,8 @@ fi
 
 
 echo "Installation completed."
+
+# 3d
+sudo npm install neovim
+pip3 install neovim
+
