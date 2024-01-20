@@ -1,0 +1,49 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+option_as_alt = "Both"
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+bold = { family = "Hack Nerd Font", style = "Bold" }
+italic = { family = "Hack Nerd Font", style = "Italic" }
+bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
+size = 14
+
+[colors]
+cursor = { text = "CellBackground", cursor = "CellForeground" }
+selection = { foreground = "CellBackground", background = "CellForeground" }
+[colors.primary]
+background = "#282c34"
+foreground = "#abb2bf"
+[colors.normal]
+black = "#282c34"
+red = "#e06c75"
+green = "#98c379"
+yellow = "#e5c07b"
+blue = "#61afef"
+magenta = "#c678dd"
+cyan = "#56b6c2"
+white = "#abb2bf"
+[colors.bright]
+black = "#3e4451"
+red = "#e9969d"
+green = "#b3d39c"
+yellow = "#edd4a6"
+blue = "#8fc6f4"
+magenta = "#d7a1e7"
+cyan = "#7bc6d0"
+white = "#c8cdd5"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", mode = "~Search", action = "ToggleViMode" },
+  { key = "Return", mods = "Command", action = "ToggleFullscreen" },
+]
