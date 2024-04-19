@@ -163,3 +163,5 @@ echo "Installation completed."
 sudo npm install neovim
 pip3 install neovim
 
+# plantuml
+sudo apt install plantuml imv feh
