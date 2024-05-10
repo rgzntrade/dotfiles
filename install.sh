@@ -75,6 +75,10 @@ cargo install gitui
 echo "Installing Bob-nvim..."
 cargo install bob-nvim
 
+# Install zellij using Cargo
+echo "Installing zellij..."
+cargo install zellij
+
 # Verify Bob-nvim installation
 if command -v bob &> /dev/null; then
 	    echo "Bob is installed successfully."
