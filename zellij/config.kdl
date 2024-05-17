@@ -124,6 +124,7 @@ keybinds clear-defaults=true {
     tmux {
         bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
+        bind "m" { SwitchToMode "Move"; }
         bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "b" { BreakPane; SwitchToMode "Normal"; }
