@@ -96,6 +96,9 @@ keybinds clear-defaults=true {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
+        bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "g" { ScrollToTop; }
+        bind "G" { ScrollToBottom; }
     }
     entersearch {
         bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
