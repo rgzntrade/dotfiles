@@ -1,6 +1,4 @@
 (
-  selection_bg: Some("#afff00"),
-  cmdbar_bg: Some("#afff00"),
   command_fg: Some("#000000"),
   selection_fg: Some("#000000"),
 )
