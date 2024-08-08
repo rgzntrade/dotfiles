@@ -1,4 +1,4 @@
 (
-  command_fg: Some("#000000"),
-  selection_fg: Some("#000000"),
+  command_fg: Some("#222222"),
+  selection_fg: Some("#222222"),
 )
