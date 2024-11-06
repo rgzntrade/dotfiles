@@ -82,8 +82,7 @@ plugins=(git
     zsh-autosuggestions
     zsh-nvim-appname
     z
-    vi-mode
-    autojump)
+    vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
