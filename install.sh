@@ -164,7 +164,7 @@ fi
 echo "Installation completed."
 
 # 3d
-sudo npm install -y neovim
+npm install -y neovim
 pip3 install  neovim
 
 # plantuml
