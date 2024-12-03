@@ -164,8 +164,11 @@ fi
 echo "Installation completed."
 
 # 3d
-sudo npm install neovim
-pip3 install neovim
+sudo npm install -y neovim
+pip3 install  neovim
 
 # plantuml
-sudo apt install plantuml imv feh
+sudo apt install -y plantuml imv feh
+
+# luarocks
+sudo apt-get install -y luarocks
