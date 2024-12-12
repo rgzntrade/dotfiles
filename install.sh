@@ -172,3 +172,7 @@ sudo apt install -y plantuml imv feh
 
 # luarocks
 sudo apt-get install -y luarocks
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
