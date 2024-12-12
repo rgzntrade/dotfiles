@@ -108,6 +108,7 @@ if command -v fd >/dev/null 2>&1; then
 else
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt-get install -y fd-find
+    sudo ln -s $(which fdfind) /usr/local/bin/fd
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install fd
   else
