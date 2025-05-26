@@ -6,3 +6,5 @@ nvim/plugin/
 nvim/lua/.luarc.json
 .luarc.json
 nvim/log/
+package.json
+package-lock.json
