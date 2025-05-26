@@ -177,6 +177,11 @@ if ! dpkg -l | grep -q clipboard; then
   sudo dnf install -y wl-clipboard
 fi
 
+# 检查并安装sshfs
+if ! dpkg -l | grep -q sshfs; then
+    sudo apt install sshfs -y
+fi
+
 # 检查并安装fzf
 if ! dpkg -l | grep -q fzf; then
     sudo apt install fzf -y
