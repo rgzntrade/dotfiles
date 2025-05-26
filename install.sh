@@ -37,9 +37,9 @@ else
     sudo apt-get install -y zsh
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install zsh
+    chsh -s $(which zsh)
   fi
 fi
-
 # 安装 tmux
 # echo "Installing tmux..."
 # if command -v tmux >/dev/null 2>&1; then
@@ -69,15 +69,23 @@ fi
 
 # Install Gitui using Cargo
 echo "Installing gitui..."
-cargo install gitui
+cargo install gitui --locked
+
+# Install alacritty using Cargo
+echo "Installing alacritty..."
+cargo install alacritty --locked
 
 # Install Bob-nvim using Cargo
 echo "Installing Bob-nvim..."
-cargo install bob-nvim
+cargo install bob-nvim --locked
 
 # Install zellij using Cargo
 echo "Installing zellij..."
-cargo install zellij
+cargo install zellij --locked
+
+# Install neovide using Cargo
+echo "Installing neovide..."
+cargo install --git https://github.com/neovide/neovide
 
 # Verify Bob-nvim installation
 if command -v bob &> /dev/null; then
@@ -158,22 +166,65 @@ else
 fi
 
 
+
+# 检查并安装nodejs
+if ! dpkg -l | grep -q nodejs; then
+    curl -sL https://deb.nodesource.com/setup_22.x | sudo -e bash -
+    sudo apt install nodejs -y
+fi
+# 检查并安装clipboard
+if ! dpkg -l | grep -q clipboard; then
+  sudo dnf install -y wl-clipboard
+fi
+
+# 检查并安装fzf
+if ! dpkg -l | grep -q fzf; then
+    sudo apt install fzf -y
+fi
+
+# 检查并安装python3和python3-pip
+if ! dpkg -l | grep -q python3; then
+    sudo apt install python3 python3-pip python3-venv -y
+fi
+
+#检查并安装llvm
+if ! dpkg -l | grep -q llvm-; then
+    sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+fi
+
+# 3d部分
+# 检查并安装neovim通过npm
+if ! npm list -g | grep -q neovim; then
+    npm install -y neovim
+fi
+
+# 检查并安装neovim通过pip3
+if ! pip3 show neovim >/dev/null 2>&1; then
+    pip3 install neovim
+fi
+
+# plantuml部分
+# 检查并安装plantuml、imv和feh
+packages=("plantuml" "imv" "feh")
+for package in "${packages[@]}"; do
+    if ! dpkg -l | grep -q $package; then
+        sudo apt install -y $package
+    fi
+done
+
+# luarocks部分
+if ! dpkg -l | grep -q luarocks; then
+    sudo apt-get install -y luarocks
+fi
+
+# fzf部分
+# if [ ! -d ~/.fzf ]; then
+#     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+#     ~/.fzf/install
+# fi
+
 # 使用dotbot配置
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
 
 echo "Installation completed."
-
-# 3d
-npm install -y neovim
-pip3 install  neovim
-
-# plantuml
-sudo apt install -y plantuml imv feh
-
-# luarocks
-sudo apt-get install -y luarocks
-
-# fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
