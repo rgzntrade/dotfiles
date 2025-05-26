@@ -11,3 +11,4 @@
     "$HOME/.config/gitui": gitui 
     "$HOME/.config/zellij": zellij
     "$HOME/.alacirtty.toml": alacritty/alacritty.toml
+    "$HOME/.cargo/bin": neovide/vup
