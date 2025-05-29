@@ -172,9 +172,14 @@ if ! dpkg -l | grep -q nodejs; then
     curl -sL https://deb.nodesource.com/setup_22.x | sudo -e bash -
     sudo apt install nodejs -y
 fi
-# 检查并安装clipboard
-if ! dpkg -l | grep -q clipboard; then
-  sudo dnf install -y wl-clipboard
+# # 检查并安装clipboard
+# if ! dpkg -l | grep -q clipboard; then
+#   sudo dnf install -y wl-clipboard
+# fi
+
+# 检查并安装xclip
+if ! dpkg -l | grep -q xclip; then
+    sudo apt install xclip -y
 fi
 
 # 检查并安装sshfs
