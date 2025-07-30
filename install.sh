@@ -188,9 +188,9 @@ if ! dpkg -l | grep -q sshfs; then
 fi
 
 # 检查并安装fzf
-if ! dpkg -l | grep -q fzf; then
-    sudo apt install fzf -y
-fi
+# if ! dpkg -l | grep -q fzf; then
+    # sudo apt install fzf -y
+# fi
 
 # 检查并安装python3和python3-pip
 if ! dpkg -l | grep -q python3; then
@@ -228,10 +228,10 @@ if ! dpkg -l | grep -q luarocks; then
 fi
 
 # fzf部分
-# if [ ! -d ~/.fzf ]; then
-#     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-#     ~/.fzf/install
-# fi
+if [ ! -d ~/.fzf ]; then
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+fi
 
 # 使用dotbot配置
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
