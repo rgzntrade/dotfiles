@@ -37,7 +37,11 @@ packer.init {
     open_fn = function()
       return require('packer.util').float({ border = 'single' })
     end
-  }
+  },
+  -- 网络较慢时调大 git 克隆超时，避免 nvim-treesitter 等大仓库被 kill 掉
+  git = {
+    clone_timeout = 600,
+  },
 }
 
 packer.startup({function()
@@ -193,7 +197,6 @@ packer.startup({function()
   -- 管理工具lsp dap linter format
   use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
   use({ "jay-babu/mason-null-ls.nvim" })
-  use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "neovim/nvim-lspconfig" }
   use {

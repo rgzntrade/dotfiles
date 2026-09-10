@@ -6,9 +6,11 @@
 
 - link:
     "$HOME/.config/nvim": nvim
-    "$HOME/.config/nvim_nv": nvim/NvChad
     "$HOME/.config/nvim_up": nvim/UP
     "$HOME/.config/gitui": gitui 
     "$HOME/.config/zellij": zellij
-    "$HOME/.alacirtty.toml": alacritty/alacritty.toml
-    "$HOME/.cargo/bin": neovide/vup
+    "$HOME/.config/alacritty/alacritty.toml": alacritty/alacritty.toml
+    "$HOME/.cargo/bin/vup": neovide/vup
+    "$HOME/.zshrc":
+      path: zsh/zshrc
+      force: true

@@ -1,4 +1,4 @@
 #!/bin/bash
-env WAYLAND_DISPLAY= neovide --fork "$@"
+env WAYLAND_DISPLAY= neovide --fork --no-startup-message-capture "$@"
 # echo "$@"
 # neovide "$@" --fork 

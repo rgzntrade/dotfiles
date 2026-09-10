@@ -280,7 +280,8 @@ load_plugins {
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
+// 默认直接进终端布局（tab-bar + pane + status-bar），避免启动弹出 welcome-screen 插件选择界面
+default_layout "default"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
@@ -306,7 +307,8 @@ load_plugins {
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+// 关闭窗格边框，减少 alacritty 下的重绘闪烁
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -382,7 +384,8 @@ load_plugins {
 //   - true (default)
 //   - false
 // 
-// auto_layout false
+// 关掉自动换布局，避免分屏时反复重排导致闪烁
+auto_layout false
  
 // Whether sessions should be serialized to the cache folder (including their tabs/panes, cwds and running commands) so that they can later be resurrected
 // Options:
